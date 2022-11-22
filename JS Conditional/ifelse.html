@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Conditional</title>
+</head>
+<body>
+
+    <script>
+        let num = prompt('Hay nhap phep tinh');
+        let result = 0;
+
+        num = num.split('');
+        let soThuNhat = num[0];
+        let phepTinh = num[1];
+        let soThuHai = num [2];
+    while(true){
+        if (phepTinh == '*') {
+            result = soThuNhat * soThuHai
+            break;   
+        }
+        else if (phepTinh == '+'){
+            result = Number(soThuNhat) + Number(soThuHai);
+            break;
+        }
+        else if (phepTinh == '-'){
+            result = Number(soThuNhat) - Number(soThuHai);
+            break;
+        }
+        else if (phepTinh == '/'){
+            result = Number(soThuNhat) / Number(soThuHai);
+            break;
+        }
+        else {
+            alert('Phep tinh khong dung');
+            num = prompt('Hay Nhap phep tinh');
+            soThuNhat = num[0];
+            phepTinh = num[1];
+            soThuHai = num[2];
+        }
+    }
+        let resultFinal = result % 2 ==0 ? 'Ket qua la so chan': 'Ket qua la so le'
+        document.write(resultFinal + result);
+
+    let text = 'Hello World';
+    textDemo = text.split(' ');
+    console.log(textDemo);
+    </script>
+</body>
+</html>
